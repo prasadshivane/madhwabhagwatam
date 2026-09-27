@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #f3d4a5;
+  --hdr1: #da9d5b;
+  --hdr2: #c4883e;
+  --hdr-txt: #000;
+  --link: #b91c1c;
+  --txt: #000;
+  --txt2: #604500;
+  --muted: rgba(0,0,0,0.55);
+  --border: #da9d5b;
+  --serif: 'Noto Serif Devanagari', 'Noto Serif', Georgia, serif;
+  --sans: 'Noto Sans Devanagari', 'Noto Sans', Arial, sans-serif;
+  --fs: 1.125;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px}
+body{
+  font-family:var(--serif);
+  color:var(--txt);
+  background:var(--bg);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ═══ HEADER — exact vedabase two-bar ═══ */
+.hdr1{background:var(--hdr1);padding:1rem 0}
+.hdr2{background:var(--hdr2)}
+.hw{max-width:80rem;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between}
+@media(min-width:768px){.hw{padding:0 2rem}}
+
+.site-t{font-size:1.25rem;font-weight:700;color:var(--hdr-txt);text-decoration:none;white-space:nowrap}
+.site-t:hover{text-decoration:none;opacity:.8}
+
+.hdr-r{display:flex;align-items:center;gap:.5rem}
+.fb{
+  background:rgba(218,157,91,.3);border:1px solid var(--border);border-radius:6px;
+  padding:5px 10px;cursor:pointer;font:600 .875rem/1 var(--sans);color:var(--hdr-txt);
+}
+.fb:hover{background:rgba(218,157,91,.55)}
+
+.hnav{display:flex;gap:1.5rem;padding:.65rem 0}
+.hnav a{color:var(--hdr-txt);font:600 .875rem var(--sans);text-decoration:none;opacity:.9}
+.hnav a:hover{opacity:.6;text-decoration:none}
+
+.srch-t{
+  display:flex;align-items:center;gap:.5rem;
+  background:rgba(243,212,165,.5);border:1px solid rgba(218,157,91,.7);border-radius:8px;
+  padding:6px 14px;cursor:pointer;color:var(--muted);font:.875rem var(--sans);
+}
+.srch-t svg{flex-shrink:0;opacity:.6}
+
+/* ═══ LAYOUT ═══ */
+.wrap{max-width:80rem;margin:0 auto;padding:0 1rem}
+@media(min-width:768px){.wrap{padding:0 2rem}}
+
+.bc{margin:2rem 0;font:.9375rem var(--sans);line-height:2}
+.bc a{color:var(--link)}
+.bc .s{margin:0 .15rem;opacity:.5}
+
+main{flex:1;padding-bottom:3rem}
+
+/* ═══ PAGE TITLE — vedabase em-text-4xl centered bold ═══ */
+.pt{
+  text-align:center;font-weight:700;
+  font-size:calc(var(--fs) * 2.25rem);
+  line-height:calc(var(--fs) * 1.3em);
+  margin:calc(var(--fs) * 1.5em) 0 calc(var(--fs) * 1.5em);
+}
+@media(max-width:639px){.pt{font-size:calc(var(--fs) * 1.6rem)}}
+
+/* ═══ ITEM LIST — vedabase canto/chapter links: mb-4 per item ═══ */
+.il{list-style:none}
+.il li{
+  margin-bottom:calc(var(--fs) * 1rem);
+  font-size:calc(var(--fs) * 1rem);
+  line-height:calc(var(--fs) * 2rem);
+}
+.il a{color:var(--link);font-weight:500}
+.il a:hover{text-decoration:underline}
+.ic{opacity:.4;font-size:.85em;margin-left:.3em}
+
+/* ═══ VERSE HEADING — vedabase "Text N" em-text-3xl centered link ═══ */
+.vh{
+  text-align:center;
+  font-size:calc(var(--fs) * 1.875rem);
+  line-height:calc(var(--fs) * 1.3em);
+  margin:calc(var(--fs) * 1.5em) 0 calc(var(--fs) * .75em);
+  font-weight:700;
+  color:var(--link);
+}
+
+/* ═══ VERSE TEXT — vedabase em-mb-4 em-leading-8 em-text-lg text-center ═══ */
+.vt{
+  text-align:center;
+  font-size:calc(var(--fs) * 1.125rem);
+  line-height:calc(var(--fs) * 2rem);
+  margin-bottom:calc(var(--fs) * 1rem);
+  user-select:text;
+}
+
+/* ═══ CHAPTER END — "iti shrimadbhagavate..." ═══ */
+.ce{
+  text-align:center;font-weight:600;
+  font-size:calc(var(--fs) * 1rem);
+  line-height:calc(var(--fs) * 2rem);
+  margin:calc(var(--fs) * 2.5em) 0 calc(var(--fs) * 1em);
+  color:var(--txt2);
+}
+
+/* ═══ NAV PAGER — vedabase prev/next ═══ */
+.np{display:flex;justify-content:space-between;align-items:center;margin:calc(var(--fs)*1.5em) 0;gap:1rem;font-family:var(--sans)}
+.nb{
+  display:inline-flex;align-items:center;padding:.5rem 1rem;
+  font:500 1rem var(--sans);
+  background:rgba(218,157,91,.3);border:1px solid var(--border);border-radius:8px;
+  color:var(--hdr-txt);text-decoration:none;
+}
+.nb:hover{background:rgba(218,157,91,.5);text-decoration:none}
+.nb.dis{opacity:.3;pointer-events:none}
+.nb .ar{margin:0 .35rem}
+
+/* ═══ FOOTER ═══ */
+footer{margin-top:auto;text-align:center;padding:.75rem 0 1.5rem;font:.875rem var(--sans);color:var(--muted)}
+
+/* ═══ SEARCH OVERLAY ═══ */
+.so{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;justify-content:center;padding-top:10vh}
+.so.on{display:flex}
+.sm{background:var(--bg);border-radius:12px;width:90%;max-width:600px;max-height:70vh;display:flex;flex-direction:column;box-shadow:0 4px 24px rgba(0,0,0,.3)}
+.smh{padding:1rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.smh svg{opacity:.5;flex-shrink:0}
+.smh input{width:100%;border:none;background:transparent;font:calc(var(--fs)*1.125rem) var(--serif);outline:none;color:var(--txt)}
+.sr{overflow-y:auto;padding:.5rem;flex:1}
+.sri{display:block;padding:.75rem 1rem;border-bottom:1px solid rgba(0,0,0,.06);border-radius:4px;color:inherit;text-decoration:none}
+.sri:hover{background:rgba(218,157,91,.2);text-decoration:none}
+.sri .rr{font:.8rem var(--sans);color:var(--txt2);margin-bottom:.15rem}
+.sri .rt{font-size:calc(var(--fs)*.95rem);line-height:1.6}
+
+/* ═══ GO TOP ═══ */
+.gt{
+  position:fixed;bottom:2rem;right:2rem;width:2.5rem;height:2.5rem;border-radius:50%;
+  background:var(--hdr1);color:var(--hdr-txt);border:none;cursor:pointer;font-size:1.2rem;
+  display:none;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2);z-index:50;
+}
+.gt.on{display:flex}
+
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:rgba(0,0,0,.05)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+
+@media(max-width:640px){
+  .srch-t span{display:none}
+  .hnav{gap:1rem}
+}

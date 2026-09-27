@@ -32,13 +32,13 @@ a:hover{text-decoration:underline}
 /* ═══ HEADER — exact vedabase two-bar ═══ */
 .hdr1{background:var(--hdr1);padding:1rem 0}
 .hdr2{background:var(--hdr2)}
-.hw{max-width:80rem;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between}
+.hw{max-width:80rem;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;position:relative}
 @media(min-width:768px){.hw{padding:0 2rem}}
 
-.site-t{font-size:1.25rem;font-weight:700;color:var(--hdr-txt);text-decoration:none;white-space:nowrap}
+.site-t{font-size:1.25rem;font-weight:700;color:var(--hdr-txt);text-decoration:none;white-space:nowrap;position:absolute;left:50%;transform:translateX(-50%);text-align:center}
 .site-t:hover{text-decoration:none;opacity:.8}
 
-.hdr-r{display:flex;align-items:center;gap:.5rem}
+.hdr-r{display:flex;align-items:center;gap:.5rem;margin-left:auto}
 .fb{
   background:rgba(218,157,91,.3);border:1px solid var(--border);border-radius:6px;
   padding:5px 10px;cursor:pointer;font:600 .875rem/1 var(--sans);color:var(--hdr-txt);

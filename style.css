@@ -154,6 +154,14 @@ footer{margin-top:auto;text-align:center;padding:.75rem 0 1.5rem;font:.875rem va
 ::-webkit-scrollbar-track{background:rgba(0,0,0,.05)}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
 
+details.tp{margin:.5rem auto 1.5rem;max-width:48rem;text-align:center}
+details.tp summary{cursor:pointer;color:var(--link);font-family:var(--serif);font-size:calc(var(--fs) * 1rem);font-weight:600;list-style:none;display:inline-block;border-bottom:1px dashed var(--link);padding-bottom:1px}
+details.tp summary::-webkit-details-marker{display:none}
+details.tp summary::marker{content:""}
+details.tp[open] summary{margin-bottom:.75rem}
+.tpc{text-align:center;background:rgba(185,28,28,0.06);border-left:3px solid var(--link);padding:.5rem;border-radius:0 6px 6px 0}
+.tpi{max-width:100%;height:auto;border-radius:4px}
+
 @media(max-width:640px){
   .srch-t span{display:none}
   .hnav{gap:1rem}
